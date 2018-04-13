@@ -33,7 +33,7 @@ public class GetNewsTask extends AsyncTask<String, Void, ArrayList<NewsArticle>>
 
     @Override
     protected void onPreExecute() {
-        super.onPreExecute();//
+        super.onPreExecute();
         pDlg.show();
     }
 

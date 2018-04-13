@@ -37,7 +37,7 @@ public class NewsActivity extends AppCompatActivity implements GetNewsTask.INews
                 Log.d("demoNA", "onCreate: "+sCategory);
                 setTitle(sCategory);
                 if(isConnected()) {
-                    new GetNewsTask(NewsActivity.this, NewsActivity.this).execute("https://newsapi.org/v2/top-headlines?country=us&apiKey=bbee98d8505449b6ae2f0f5e4bdb22b3&category=" + sCategory);
+                    new GetNewsTask(NewsActivity.this,NewsActivity.this).execute("https://newsapi.org/v2/top-headlines?country=us&apiKey=bbee98d8505449b6ae2f0f5e4bdb22b3&category=" + sCategory);
                 }else{
                     Toast.makeText(this, "No Internet", Toast.LENGTH_SHORT).show();
                 }

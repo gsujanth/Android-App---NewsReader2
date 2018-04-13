@@ -18,13 +18,13 @@ import java.util.ArrayList;
 
 public class GetNewsTask extends AsyncTask<String, Void, ArrayList<NewsArticle>> {
 
-    INewsArticle iNewsArticle;
-    Context ctx;
-    ProgressDialog pDlg;
+    private INewsArticle iNewsArticle;
+    private Context ctx;
+    private ProgressDialog pDlg;
 
-    public GetNewsTask(INewsArticle iNewsArticle,Context ctx) {
+    GetNewsTask(INewsArticle iNewsArticle, Context ctx) {
         this.iNewsArticle = iNewsArticle;
-        this.ctx=ctx;
+        this.ctx = ctx;
         pDlg = new ProgressDialog(ctx);
         pDlg.setMessage("Loading News...");
         pDlg.setCancelable(false);
@@ -37,13 +37,14 @@ public class GetNewsTask extends AsyncTask<String, Void, ArrayList<NewsArticle>>
         pDlg.show();
     }
 
-    HttpURLConnection con;
+    private HttpURLConnection con;
+
     @Override
     protected ArrayList<NewsArticle> doInBackground(String... strings) {
         ArrayList<NewsArticle> result = new ArrayList<>();
-        for (int i = 0; i <100 ; i++) {
-            for (int j = 0; j <10000 ; j++) {
-
+        for (int i = 0; i < 100; i++) {
+            for (int j = 0; j < 10000; j++) {
+                //adding run time
             }
         }
         try {
@@ -63,7 +64,7 @@ public class GetNewsTask extends AsyncTask<String, Void, ArrayList<NewsArticle>>
                     nArticle.description = articleJson.getString("description");
                     result.add(nArticle);
                 }
-                Log.d("demoGNT", "doInBackground: "+result.toString());
+                Log.d("demoGNT", "doInBackground: " + result.toString());
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();

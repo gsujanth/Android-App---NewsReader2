@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">InClass07</string>
+    <string-array
+        name="string_array_category">
+        <item>Business</item>
+        <item>Entertainment</item>
+        <item>General</item>
+        <item>Health</item>
+        <item>Science</item>
+        <item>Sports</item>
+        <item>Technology</item>
+    </string-array>
+
+</resources>

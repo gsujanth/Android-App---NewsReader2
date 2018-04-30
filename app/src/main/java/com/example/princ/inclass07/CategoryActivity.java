@@ -1,7 +1,6 @@
 package com.example.princ.inclass07;
-/*Assignment# - InClass07
-  Names : Sujanth Babu Guntupalli
-          Mounika Yendluri
+/*
+  Author : Sujanth Babu Guntupalli
 */
 
 import android.content.Intent;
